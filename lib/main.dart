@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Intro to charts',
-      theme: ThemeData.light(),
+      theme: ThemeData(),
       home: HomePage(title: 'Intro to charts'),
     );
   }

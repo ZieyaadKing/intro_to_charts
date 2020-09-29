@@ -1,8 +1,7 @@
 import 'package:charts_flutter/flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:intro_to_charts/data/assessment.dart';
-import 'package:intro_to_charts/views/list_item.dart';
+import 'package:intro_to_charts/data/list_item.dart';
 import 'dart:math';
 
 class AssessmentTile implements ListItem {
