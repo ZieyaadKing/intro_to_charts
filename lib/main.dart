@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:intro_to_charts/data/assement_tile.dart';
+import 'package:intro_to_charts/data/list_item.dart';
+import 'package:intro_to_charts/views/chart_listview.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,29 +13,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Intro to charts',
-      theme: ThemeData(),
-      home: HomePage(title: 'Intro to charts'),
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  HomePage({Key key, this.title}) : super(key: key);
-  final String title;
-
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+      theme: ThemeData(
+        primaryColor: Color.fromRGBO(24, 24, 24, 1.0),
+        canvasColor: Color.fromRGBO(46, 49, 49, 1.0),
+        brightness: Brightness.dark,
       ),
-      body: Container(), // This trailing comma makes auto-formatting nicer for build methods.
+      home: ChartListView(
+        items: List<ListItem>.generate(
+            5, (index) => AssessmentTile(heading: "Assignment $index")),
+      ),
     );
   }
 }

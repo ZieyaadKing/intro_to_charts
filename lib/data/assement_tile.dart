@@ -34,7 +34,7 @@ class AssessmentTile implements ListItem {
     );
   }
 
-  List<Series> _createSampleData() {
+  List<Series<dynamic, String>> _createSampleData() {
     final assessmentData = [
       Assessment(name: "A", marks: _next(0, 100)),
       Assessment(name: "B", marks: _next(0, 100)),
@@ -58,7 +58,7 @@ class AssessmentTile implements ListItem {
     )];
   }
 
-  BarChart _displayChart(List<Series> sampleData, bool animate) {
+  BarChart _displayChart(List<Series<dynamic, String>> sampleData, bool animate) {
     return BarChart(
       sampleData,
       animate: animate,
